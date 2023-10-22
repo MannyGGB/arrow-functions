@@ -165,17 +165,18 @@ Student.prototype.scope = function () {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+//It retrieves the values in the constructor function Student, which is creating a new Student (Joe).
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//It retrieves the global value for Window.
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// "Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods." (MDN)
+// Arrow functions can't read the values of this inside an object, so when you use this, arrow functions take the whole Window as the object.
